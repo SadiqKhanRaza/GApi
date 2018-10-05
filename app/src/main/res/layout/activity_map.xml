@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapActivity">
+    tools:context=".MapActivity"
+    android:orientation="vertical">
     <fragment
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/f1"
+        android:id="@+id/f2"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"/>
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
         android:id="@+id/f1"
         tools:context=".MapActivity"
+        android:layout_marginTop="10dp"
         android:name="com.google.android.gms.maps.SupportMapFragment">
 
     </fragment>
 
-</android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/f2"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:onClick="initPlacePicker"
+        android:src="@drawable/common_google_signin_btn_icon_dark_focused" />
+
+</LinearLayout>

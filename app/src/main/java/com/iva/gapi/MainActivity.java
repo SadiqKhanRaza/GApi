@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         tv2=findViewById(R.id.textView2);
         tv3=findViewById(R.id.textView3);
         b1=findViewById(R.id.button);
-        b2=findViewById(R.id.button2);
 
         findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,12 +48,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         loc= LocationServices.getFusedLocationProviderClient(MainActivity.this);
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
         b1.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("MissingPermission")
             @Override
