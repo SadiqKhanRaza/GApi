@@ -129,7 +129,7 @@ public class MapActivity extends AppCompatActivity {
             {
                 Place place = PlacePicker.getPlace(this,data);
 
-                Toast.makeText(this, place.getAddress().getClass()+"", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, place.getAddress().getClass()+" : class " +new Address(place.getLocale()).getAdminArea(), Toast.LENGTH_LONG).show();
                 gmap.clear();
                 LatLng newlatlng = place.getLatLng();
 
