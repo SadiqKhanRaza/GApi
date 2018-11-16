@@ -129,7 +129,8 @@ public class MapActivity extends AppCompatActivity {
             {
                 Place place = PlacePicker.getPlace(this,data);
 
-                Toast.makeText(this, place.getAddress().getClass()+" : class " +new Address(place.getLocale()).getAdminArea(), Toast.LENGTH_LONG).show();
+                Toast.makeText(this, place.getAddress().getClass()+" :" +
+                        " class " +new Address(place.getLocale()).getAdminArea(), Toast.LENGTH_LONG).show();
                 gmap.clear();
                 LatLng newlatlng = place.getLatLng();
 
@@ -180,7 +181,8 @@ public class MapActivity extends AppCompatActivity {
 
 
     private void checkLocationPermission() {
-        if(ContextCompat.checkSelfPermission(this, permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_GRANTED) {
+        if(ContextCompat.checkSelfPermission(this, permission.ACCESS_FINE_LOCATION)==
+                PackageManager.PERMISSION_GRANTED) {
             isPermisssionGranted = true;
             fusedLocationProviderClient.getLastLocation().addOnSuccessListener(new OnSuccessListener<Location>() {
                 @Override
